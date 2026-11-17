@@ -20,8 +20,16 @@ namespace szamonkereslinq
                 .ToList();
         }
 
+        public double AtlagosVeszelyesseg()
+        {
+            return szornyek
+                .Average(k => k.VeszelyessegiSzint);
+        }
 
-
-
+        public bool vanExtremTuzGyengeSzorny()
+        {
+            return szornyek
+                .Any(k => k.FoGyengeseg == "Tűz" && k.VeszelyessegiSzint > 9);
+        }
     }
 }

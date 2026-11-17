@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 
+
 namespace szamonkereslinq
 {
     internal class SzornyAdatbazis
@@ -10,14 +11,14 @@ namespace szamonkereslinq
 
         public SzornyAdatbazis()
         {
-            this.connectionString = "server=localhost;port=3306;user=root;password=;database="fantasybestariumdb"; 
+            this.connectionString = "server=localhost;port=3306;user=root;password=;database=fantasybestariumdb"; 
         }
 
         public List<Szorny> Feltolt()
         {
             var szornyek = new List<Szorny>();
 
-            using (MySqlConnection = new MySqlConnection(connectionString))
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 string query = "SELECT * FROM szornyek";
                 using (MySqlCommand command = new MySqlCommand(query, connection))
