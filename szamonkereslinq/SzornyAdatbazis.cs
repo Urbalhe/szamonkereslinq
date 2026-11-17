@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
+
 
 
 namespace szamonkereslinq
@@ -11,7 +13,7 @@ namespace szamonkereslinq
 
         public SzornyAdatbazis()
         {
-            this.connectionString = "server=localhost;port=3306;user=root;password=;database=fantasybestariumdb"; 
+            this.connectionString = "server=localhost;port=3306;user=root;password=;database=fantasybestariumdb";
         }
 
         public List<Szorny> Feltolt()
