@@ -38,5 +38,13 @@ namespace szamonkereslinq
         public string FoGyengeseg { get => foGyengeseg; set => foGyengeseg = value; }
         public string LeggyakoribbZsakmany { get => leggyakoribbZsakmany; set => leggyakoribbZsakmany = value; }
         public bool VeszelyesE { get => veszelyesE; set => veszelyesE = value; }
+
+        public override string ToString()
+        {
+            return $"Id: {Id}, Nev: {Nev}, VeszelyessegiSzint: {VeszelyessegiSzint}, Elohely: {Elohely}, FoGyengeseg: {FoGyengeseg}, LeggyakoribbZsakmany: {LeggyakoribbZsakmany}, VeszelyesE: {VeszelyesE}";
+        }
     }
+
+   
 }
+
